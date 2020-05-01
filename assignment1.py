@@ -144,7 +144,7 @@ def computeWeights(X, FeaturesList, OutputList, numberOfDataPoints, regularizati
     if (regularization == True):
         # create identity matrix where bottom right element is 0
         identity_matrix = np.identity(5)
-        identity_matrix[:1] = 0
+        identity_matrix[4:] = 0
         regularization = lambda_ * identity_matrix
     else:
         regularization = 0
